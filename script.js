@@ -1,26 +1,17 @@
+// ===== Đồng hồ =====
 function updateClock() {
     const now = new Date();
 
-    const options = {
-        weekday: 'long',
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-    };
-
-    const date = now.toLocaleDateString('vi-VN', options);
-    const time = now.toLocaleTimeString('vi-VN');
-
-    const clock = document.getElementById("clock");
-
-    if (clock) {
-        clock.innerHTML = `${date}<br>${time}`;
-    }
+    document.getElementById("clock").innerHTML =
+        now.toLocaleDateString("vi-VN") +
+        "<br>" +
+        now.toLocaleTimeString("vi-VN");
 }
 
 setInterval(updateClock, 1000);
 updateClock();
 
+// ===== Gửi tin nhắn =====
 function sendMessage() {
 
     const input = document.getElementById("question");
@@ -36,27 +27,11 @@ function sendMessage() {
         </div>
     `;
 
-    let answer = "";
-
-    const q = text.toLowerCase();
-
-    if (q.includes("xin chào")) {
-        answer = "Xin chào! Tôi là AI Lê Mạnh Dũng. Rất vui được hỗ trợ bạn.";
-    }
-    else if (q.includes("thủ tục")) {
-        answer = "Chức năng tra cứu thủ tục sẽ được cập nhật trong phiên bản tiếp theo.";
-    }
-    else if (q.includes("mường nhé")) {
-        answer = "Mường Nhé là một xã thuộc tỉnh Điện Biên.";
-    }
-    else if (q.includes("thời tiết")) {
-        answer = "Chức năng thời tiết sẽ sớm được tích hợp.";
-    }
-    else {
-        answer = "Đây là phiên bản thử nghiệm. Sau này website sẽ kết nối AI để trả lời thông minh như ChatGPT.";
-    }
+    input.value = "";
 
     setTimeout(() => {
+
+        let answer = getAIAnswer(text);
 
         chat.innerHTML += `
             <div class="ai">
@@ -68,11 +43,41 @@ function sendMessage() {
 
     }, 500);
 
-    input.value = "";
 }
 
-document.getElementById("question").addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
+// ===== Trả lời =====
+function getAIAnswer(question){
+
+    question = question.toLowerCase();
+
+    if(question.includes("xin chào"))
+        return "Xin chào! Tôi là AI Lê Mạnh Dũng.";
+
+    if(question.includes("mường nhé"))
+        return "Mường Nhé là xã thuộc tỉnh Điện Biên.";
+
+    if(question.includes("thời tiết"))
+        return "Chức năng thời tiết sẽ được kết nối trong phiên bản tiếp theo.";
+
+    if(question.includes("thủ tục"))
+        return "Tôi sẽ hỗ trợ tra cứu thủ tục hành chính trong phiên bản Pro.";
+
+    if(question.includes("pháp luật"))
+        return "Tôi sẽ hỗ trợ tra cứu văn bản pháp luật.";
+
+    if(question.includes("ai"))
+        return "Tôi đang được phát triển để trở thành trợ lý AI phục vụ người dân.";
+
+    return "Xin cảm ơn câu hỏi của bạn. Phiên bản hiện tại đang chạy ngoại tuyến. Phiên bản tiếp theo sẽ kết nối AI để trả lời thông minh như ChatGPT.";
+}
+
+// ===== Enter để gửi =====
+document.getElementById("question").addEventListener("keydown",function(e){
+
+    if(e.key==="Enter"){
+
         sendMessage();
+
     }
+
 });
