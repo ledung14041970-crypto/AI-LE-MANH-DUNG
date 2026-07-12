@@ -1,102 +1,59 @@
-<!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Lê Mạnh Dũng</title>
+<div class="app">
 
-    <link rel="stylesheet" href="style.css">
+    <aside class="sidebar">
 
-    <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+        <h2>🤖 AI Lê Mạnh Dũng</h2>
 
-</head>
+        <button>🏠 Trang chủ</button>
 
-<body>
+        <button>📄 Thủ tục</button>
 
-<header>
+        <button>⚖ Pháp luật</button>
 
-    <div class="logo">
+        <button>🌦 Thời tiết</button>
 
-        <i class="fa-solid fa-robot"></i>
+        <button>📰 Tin tức</button>
 
-        <h1>AI Lê Mạnh Dũng</h1>
+        <button>📞 Liên hệ</button>
 
-    </div>
+    </aside>
 
-    <div id="clock"></div>
+    <main class="content">
 
-</header>
+        <header>
 
-<nav>
+            <h1>AI Lê Mạnh Dũng</h1>
 
-<a href="#">Trang chủ</a>
+            <div id="clock"></div>
 
-<a href="#">Hỏi AI</a>
+        </header>
 
-<a href="#">Thủ tục</a>
+        <div id="chatBox">
 
-<a href="#">Tin tức</a>
+            <div class="ai">
 
-<a href="#">Liên hệ</a>
+                Xin chào!
 
-</nav>
+                Tôi là AI Lê Mạnh Dũng.
 
-<section class="hero">
+            </div>
 
-<h2>Xin chào!</h2>
+        </div>
 
-<p>
+        <div class="inputArea">
 
-Chào mừng bạn đến với AI Lê Mạnh Dũng.
+            <input
+                id="question"
+                placeholder="Nhập câu hỏi..." />
 
-Website đang được xây dựng để phục vụ cộng đồng.
+            <button onclick="sendMessage()">
 
-</p>
+                Gửi
 
-</section>
+            </button>
 
-<section class="chat">
+        </div>
 
-<div id="chatBox">
-
-<div class="ai">
-
-🤖 Xin chào!
-
-Tôi là AI Lê Mạnh Dũng.
-
-Bạn muốn hỏi điều gì?
+    </main>
 
 </div>
-
-</div>
-
-<div class="inputArea">
-
-<input
-type="text"
-id="question"
-placeholder="Nhập câu hỏi...">
-
-<button onclick="sendMessage()">
-
-Gửi
-
-</button>
-
-</div>
-
-</section>
-
-<footer>
-
-© 2026 AI Lê Mạnh Dũng
-
-</footer>
-
-<script src="script.js"></script>
-
-</body>
-
-</html>
