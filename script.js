@@ -1,78 +1,78 @@
 function updateClock() {
     const now = new Date();
 
-    const days = [
-        "Chủ nhật",
-        "Thứ Hai",
-        "Thứ Ba",
-        "Thứ Tư",
-        "Thứ Năm",
-        "Thứ Sáu",
-        "Thứ Bảy"
-    ];
+    const options = {
+        weekday: 'long',
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+    };
 
-    const day = days[now.getDay()];
-
-    const date = now.toLocaleDateString("vi-VN");
-
-    const time = now.toLocaleTimeString("vi-VN");
+    const date = now.toLocaleDateString('vi-VN', options);
+    const time = now.toLocaleTimeString('vi-VN');
 
     const clock = document.getElementById("clock");
 
-    if(clock){
-        clock.innerHTML = day + "<br>" + date + "<br>" + time;
+    if (clock) {
+        clock.innerHTML = `${date}<br>${time}`;
     }
 }
 
-setInterval(updateClock,1000);
-
+setInterval(updateClock, 1000);
 updateClock();
 
-function sendMessage(){
+function sendMessage() {
 
-    const input=document.getElementById("question");
+    const input = document.getElementById("question");
+    const chat = document.getElementById("chatBox");
 
-    const chat=document.getElementById("chatBox");
+    const text = input.value.trim();
 
-    if(!input || !chat) return;
+    if (text === "") return;
 
-    const text=input.value.trim();
+    chat.innerHTML += `
+        <div class="user">
+            👤 ${text}
+        </div>
+    `;
 
-    if(text==="") return;
+    let answer = "";
 
-    chat.innerHTML+=
-    "<div class='user'>👤 Bạn: "+text+"</div>";
+    const q = text.toLowerCase();
 
-    let answer="Xin lỗi, tôi chưa có dữ liệu.";
+    if (q.includes("xin chào")) {
+        answer = "Xin chào! Tôi là AI Lê Mạnh Dũng. Rất vui được hỗ trợ bạn.";
+    }
+    else if (q.includes("thủ tục")) {
+        answer = "Chức năng tra cứu thủ tục sẽ được cập nhật trong phiên bản tiếp theo.";
+    }
+    else if (q.includes("mường nhé")) {
+        answer = "Mường Nhé là một xã thuộc tỉnh Điện Biên.";
+    }
+    else if (q.includes("thời tiết")) {
+        answer = "Chức năng thời tiết sẽ sớm được tích hợp.";
+    }
+    else {
+        answer = "Đây là phiên bản thử nghiệm. Sau này website sẽ kết nối AI để trả lời thông minh như ChatGPT.";
+    }
 
-    const q=text.toLowerCase();
+    setTimeout(() => {
 
-    if(q.includes("xin chào"))
-        answer="Xin chào anh! Tôi là AI Lê Mạnh Dũng.";
+        chat.innerHTML += `
+            <div class="ai">
+                🤖 ${answer}
+            </div>
+        `;
 
-    else if(q.includes("thủ tục"))
-        answer="Anh hãy chọn mục Thủ tục hành chính.";
+        chat.scrollTop = chat.scrollHeight;
 
-    else if(q.includes("pháp luật"))
-        answer="Tôi sẽ hỗ trợ tra cứu văn bản pháp luật.";
+    }, 500);
 
-    else if(q.includes("mường nhé"))
-        answer="Mường Nhé là xã thuộc tỉnh Điện Biên.";
-
-    else if(q.includes("đảng"))
-        answer="Tôi có thể hỗ trợ tìm hiểu các quy định của Đảng.";
-
-    else
-        answer="Cảm ơn anh. Phiên bản AI đầy đủ sẽ trả lời thông minh hơn.";
-
-    setTimeout(function(){
-
-        chat.innerHTML+=
-        "<div class='ai'>🤖 AI: "+answer+"</div>";
-
-        chat.scrollTop=chat.scrollHeight;
-
-    },500);
-
-    input.value="";
+    input.value = "";
 }
+
+document.getElementById("question").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        sendMessage();
+    }
+});
