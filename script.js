@@ -1,1 +1,0 @@
-function hello(){o.textContent='Xin chào! Tôi là AI Lê Mạnh Dũng.'}
