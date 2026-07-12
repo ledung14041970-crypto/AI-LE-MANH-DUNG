@@ -1,0 +1,1 @@
+function hello(){alert('Xin chào anh Lê Mạnh Dũng!');}
