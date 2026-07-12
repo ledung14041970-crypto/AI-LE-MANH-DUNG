@@ -1,7 +1,94 @@
 <!DOCTYPE html>
-<html lang="vi"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>AI Lê Mạnh Dũng</title><link rel="stylesheet" href="style.css"></head>
-<body><header><h1>🤖 AI Lê Mạnh Dũng</h1><p>Trợ lý AI phục vụ cộng đồng</p></header>
-<nav><a href="#">Trang chủ</a> | <a href="#">Hỏi AI</a> | <a href="#">Liên hệ</a></nav>
-<main><div class="card"><h2>Xin chào!</h2><p>Đây là phiên bản khởi đầu.</p><button onclick="hello()">Chào AI</button></div></main>
-<footer>© 2026 AI Lê Mạnh Dũng</footer><script src="script.js"></script></body></html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Lê Mạnh Dũng</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="container">
+        <h1>🤖 AI Lê Mạnh Dũng</h1>
+        <p>Trợ lý thông minh phục vụ cộng đồng Mường Nhé</p>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h2>Xin chào!</h2>
+        <p>Tôi là AI Lê Mạnh Dũng.</p>
+        <p>Sẵn sàng hỗ trợ người dân tra cứu thông tin, thủ tục hành chính và các vấn đề đời sống.</p>
+
+        <button onclick="sayHello()">
+            Chào AI
+        </button>
+    </div>
+</section>
+
+<section class="features">
+    <div class="container">
+
+        <div class="card">
+            <h3>📄 Thủ tục hành chính</h3>
+            <p>Hướng dẫn hồ sơ, giấy tờ và quy trình thực hiện.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚖️ Pháp luật</h3>
+            <p>Tra cứu thông tin pháp luật cơ bản.</p>
+        </div>
+
+        <div class="card">
+            <h3>🏘️ Tổ dân cư</h3>
+            <p>Thông tin hoạt động khu dân cư.</p>
+        </div>
+
+        <div class="card">
+            <h3>📞 Liên hệ</h3>
+            <p>Kết nối với chính quyền địa phương.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="chatbox">
+    <div class="container">
+
+        <h2>Trò chuyện với AI</h2>
+
+        <input
+            type="text"
+            id="userInput"
+            placeholder="Nhập câu hỏi..."
+        >
+
+        <button onclick="chatAI()">
+            Gửi
+        </button>
+
+        <div id="response">
+            Xin chào, tôi có thể giúp gì cho bạn?
+        </div>
+
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <p>
+            © 2026 AI Lê Mạnh Dũng
+        </p>
+        <p>
+            Mường Nhé - Điện Biên
+        </p>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
