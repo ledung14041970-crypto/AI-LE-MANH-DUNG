@@ -1,59 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>AI Lê Mạnh Dũng</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
 <div class="app">
 
-    <aside class="sidebar">
+<h1>🤖 AI Lê Mạnh Dũng</h1>
+<p class="sub">Trợ lý thông minh cá nhân</p>
 
-        <h2>🤖 AI Lê Mạnh Dũng</h2>
+<div id="chat">
+<div class="bot">
+Xin chào! Tôi là AI Lê Mạnh Dũng. Tôi có thể hỗ trợ bạn.
+</div>
+</div>
 
-        <button>🏠 Trang chủ</button>
-
-        <button>📄 Thủ tục</button>
-
-        <button>⚖ Pháp luật</button>
-
-        <button>🌦 Thời tiết</button>
-
-        <button>📰 Tin tức</button>
-
-        <button>📞 Liên hệ</button>
-
-    </aside>
-
-    <main class="content">
-
-        <header>
-
-            <h1>AI Lê Mạnh Dũng</h1>
-
-            <div id="clock"></div>
-
-        </header>
-
-        <div id="chatBox">
-
-            <div class="ai">
-
-                Xin chào!
-
-                Tôi là AI Lê Mạnh Dũng.
-
-            </div>
-
-        </div>
-
-        <div class="inputArea">
-
-            <input
-                id="question"
-                placeholder="Nhập câu hỏi..." />
-
-            <button onclick="sendMessage()">
-
-                Gửi
-
-            </button>
-
-        </div>
-
-    </main>
+<div class="input-box">
+<input id="question" placeholder="Nhập câu hỏi của bạn...">
+<button onclick="send()">Gửi</button>
+</div>
 
 </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
