@@ -1,28 +1,128 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-<meta charset="UTF-8">
-<title>AI Lê Mạnh Dũng</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dung AI Pro</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-<div class="app">
+<div class="container">
 
-<h1>🤖 AI Lê Mạnh Dũng</h1>
-<p class="sub">Trợ lý thông minh cá nhân</p>
+    <aside class="sidebar">
 
-<div id="chat">
-<div class="bot">
-Xin chào! Tôi là AI Lê Mạnh Dũng. Tôi có thể hỗ trợ bạn.
-</div>
-</div>
+        <div class="logo">
 
-<div class="input-box">
-<input id="question" placeholder="Nhập câu hỏi của bạn...">
-<button onclick="send()">Gửi</button>
-</div>
+            <div class="logo-circle">
+                🤖
+            </div>
+
+            <h2>Dung AI Pro</h2>
+
+            <p>Powered by OpenRouter</p>
+
+        </div>
+
+        <button id="newChat">
+            ➕ Cuộc trò chuyện mới
+        </button>
+
+        <div class="history" id="history">
+
+        </div>
+
+    </aside>
+
+
+    <main class="chat-area">
+
+        <header>
+
+            <h1>AI Lê Mạnh Dũng</h1>
+
+            <span>
+                Trợ lý trí tuệ nhân tạo
+            </span>
+
+        </header>
+
+        <section
+            id="chat"
+            class="chat">
+
+            <div class="ai">
+
+                <div class="avatar">
+                    🤖
+                </div>
+
+                <div class="bubble">
+
+                    Xin chào anh <b>Lê Mạnh Dũng</b>.
+
+                    <br><br>
+
+                    Tôi là <b>Dung AI Pro</b>.
+
+                    <br><br>
+
+                    Tôi có thể hỗ trợ:
+
+                    <ul>
+
+                        <li>Hành chính</li>
+
+                        <li>Soạn văn bản</li>
+
+                        <li>Luật</li>
+
+                        <li>Âm thanh</li>
+
+                        <li>Cây cảnh</li>
+
+                        <li>Thần số học</li>
+
+                        <li>Kiến thức tổng hợp</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <footer>
+
+            <textarea
+
+                id="question"
+
+                rows="2"
+
+                placeholder="Nhập câu hỏi..."
+
+            ></textarea>
+
+
+            <button id="send">
+
+                Gửi
+
+            </button>
+
+        </footer>
+
+    </main>
 
 </div>
 
