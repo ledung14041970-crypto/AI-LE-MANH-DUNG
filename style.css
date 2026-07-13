@@ -1,135 +1,69 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Segoe UI,Arial,sans-serif;
-}
-
 body{
-    background:#f5f5f5;
+margin:0;
+font-family:Arial;
+background:#111827;
+color:white;
 }
 
 .app{
-    display:flex;
-    height:100vh;
+width:90%;
+max-width:700px;
+margin:40px auto;
+background:#1f2937;
+padding:25px;
+border-radius:20px;
+box-shadow:0 0 20px #000;
 }
 
-.sidebar{
-    width:260px;
-    background:#202123;
-    color:white;
-    padding:20px;
-    display:flex;
-    flex-direction:column;
+h1{
+text-align:center;
 }
 
-.sidebar h2{
-    margin-bottom:25px;
-    text-align:center;
+.sub{
+text-align:center;
+color:#aaa;
 }
 
-.sidebar button{
-    background:#343541;
-    color:white;
-    border:none;
-    padding:15px;
-    margin-bottom:10px;
-    border-radius:8px;
-    cursor:pointer;
-    text-align:left;
-    font-size:16px;
+#chat{
+height:450px;
+overflow:auto;
+background:#111827;
+padding:15px;
+border-radius:15px;
 }
 
-.sidebar button:hover{
-    background:#444654;
+.bot,.user{
+padding:12px;
+margin:10px;
+border-radius:12px;
 }
 
-.content{
-    flex:1;
-    display:flex;
-    flex-direction:column;
-}
-
-header{
-    background:white;
-    padding:20px;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    border-bottom:1px solid #ddd;
-}
-
-#clock{
-    color:#0d6efd;
-    font-weight:bold;
-}
-
-#chatBox{
-    flex:1;
-    overflow:auto;
-    padding:30px;
-    background:#ececf1;
-}
-
-.ai{
-    background:white;
-    padding:15px;
-    border-radius:10px;
-    margin-bottom:15px;
-    max-width:80%;
+.bot{
+background:#374151;
 }
 
 .user{
-    background:#0d6efd;
-    color:white;
-    padding:15px;
-    border-radius:10px;
-    margin:15px 0 15px auto;
-    max-width:80%;
+background:#2563eb;
+text-align:right;
 }
 
-.inputArea{
-    display:flex;
-    padding:20px;
-    background:white;
-    border-top:1px solid #ddd;
+.input-box{
+display:flex;
+margin-top:15px;
 }
 
-.inputArea input{
-    flex:1;
-    padding:15px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    font-size:16px;
+input{
+flex:1;
+padding:15px;
+border-radius:10px;
+border:none;
 }
 
-.inputArea button{
-    margin-left:10px;
-    padding:15px 25px;
-    border:none;
-    background:#0d6efd;
-    color:white;
-    border-radius:8px;
-    cursor:pointer;
-}
-
-.inputArea button:hover{
-    background:#084298;
-}
-
-@media(max-width:768px){
-
-.app{
-    flex-direction:column;
-}
-
-.sidebar{
-    width:100%;
-}
-
-header{
-    flex-direction:column;
-    gap:10px;
-}
-
+button{
+margin-left:10px;
+padding:15px 25px;
+border:none;
+border-radius:10px;
+background:#2563eb;
+color:white;
 }
