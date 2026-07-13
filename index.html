@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dung AI Pro</title>
 
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Dung AI Pro</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -21,7 +26,7 @@
 
         <div class="logo">
 
-            <div class="logo-circle">
+            <div class="logo-icon">
                 🤖
             </div>
 
@@ -32,33 +37,34 @@
         </div>
 
         <button id="newChat">
-            ➕ Cuộc trò chuyện mới
+            + Cuộc trò chuyện mới
         </button>
 
-        <div class="history" id="history">
+        <div id="history" class="history">
 
         </div>
 
     </aside>
 
 
-    <main class="chat-area">
+    <main class="main">
 
         <header>
 
-            <h1>AI Lê Mạnh Dũng</h1>
+            <div>
 
-            <span>
-                Trợ lý trí tuệ nhân tạo
-            </span>
+                <h1>AI Lê Mạnh Dũng</h1>
+
+                <span>Trợ lý trí tuệ nhân tạo</span>
+
+            </div>
 
         </header>
 
-        <section
-            id="chat"
-            class="chat">
 
-            <div class="ai">
+        <section id="chat" class="chat">
+
+            <div class="message ai">
 
                 <div class="avatar">
                     🤖
@@ -74,23 +80,25 @@
 
                     <br><br>
 
-                    Tôi có thể hỗ trợ:
+                    Tôi có thể giúp anh:
 
                     <ul>
 
-                        <li>Hành chính</li>
+                        <li>Soạn đơn từ</li>
 
-                        <li>Soạn văn bản</li>
+                        <li>Soạn văn bản hành chính</li>
 
-                        <li>Luật</li>
+                        <li>Giải thích pháp luật</li>
 
-                        <li>Âm thanh</li>
+                        <li>Tư vấn cây cảnh</li>
 
-                        <li>Cây cảnh</li>
+                        <li>Âm thanh Sony</li>
 
                         <li>Thần số học</li>
 
-                        <li>Kiến thức tổng hợp</li>
+                        <li>Dịch thuật</li>
+
+                        <li>Viết nội dung</li>
 
                     </ul>
 
@@ -100,19 +108,17 @@
 
         </section>
 
-
         <footer>
 
             <textarea
 
                 id="question"
 
-                rows="2"
-
                 placeholder="Nhập câu hỏi..."
 
-            ></textarea>
+                rows="2"
 
+            ></textarea>
 
             <button id="send">
 
@@ -129,4 +135,5 @@
 <script src="script.js"></script>
 
 </body>
+
 </html>
