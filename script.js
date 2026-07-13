@@ -1,4 +1,4 @@
-const OPENAI_API_KEY = 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
+const OPENAI_API_KEY = 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
 function send(){
 
 let q=document.getElementById("question").value;
